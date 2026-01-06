@@ -1,104 +1,473 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-  <title>Sanika - x m | Vocalist & Product Management Professional</title>
-  <meta charset="utf-8">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-ND8GH3SM');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <title>Sanika - M | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Sanika Sharma's portfolio showcasing her skills in product management, music, and vocal performance.">
-  <meta name="keywords" content="Sanika Sharma, product management, music, vocalist, portfolio">
-  <meta name="robots" content="index, follow">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Tiro+Devanagari+Hindi:ital@0;1&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&family=Baloo+2:wght@700&family=Hind:wght@500&display=swap" rel="display:stylesheet">
+  <style>
+    :root {
+      --radius: 20px;
+      --header-bg1: #2b62f6;
+      --header-bg2: #f59e42;
+      --header-bg3: #c0a4ff;
+      --header-bg4: #ffd8ec;
+      --header-bg5: #f7ad65;
+      --header-bg6: #6b9cff;
+      --card-bg: #23253a;
+      --text: #f3f3f7;
+      --accent: #f59e42;
+      --gold: #ffd700;
+      --silver: #babfc9;
+      --glass-bg: rgba(36, 40, 56, 0.32);
+      --glass-blur: blur(18px);
+      --orange: #f59e42;
+      --blue: #2563eb;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      min-height: 100vh;
+      color: var(--text);
+      background: #18181b;
+      overflow-x: hidden;
+      position: relative;
+    }
+    .digital-clock {
+      position: fixed;
+      top: 24px;
+      right: 38px;
+      z-index: 9999;
+      background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);
+      color: #fff;
+      padding: 0.6em 1em;
+      font-family: 'Montserrat', 'Roboto Mono', monospace;
+      font-size: 1.35em;
+      font-weight: 700;
+      border-radius: 18px;
+      box-shadow: 0 2px 18px #ff356244;
+      letter-spacing: 2.5px;
+      user-select: none;
+      border: none;
+      transition: background 9s;
+      animation: clockBgAnim 9s infinite alternate;
+    }
+    @keyframes clockBgAnim {
+      0% { background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);}
+      50% { background: linear-gradient(90deg, #2563eb 0%, #ff3562 100%);}
+      100% { background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);}
+    }
+    header {
+      text-align: center;
+      padding: 2.7rem 1rem 1.3rem;
+      background: linear-gradient(120deg, var(--header-bg1) 0%, var(--header-bg3) 50%, var(--header-bg5) 100%);
+      background-size: 200% 200%;
+      animation: headerBgAnim 14s ease-in-out infinite alternate;
+      color: #fff;
+      border-bottom-left-radius: var(--radius);
+      border-bottom-right-radius: var(--radius);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      position: relative;
+      overflow: visible;
+    }
+    @keyframes headerBgAnim {
+      0% { background-position: 0% 50%; background: linear-gradient(120deg, var(--header-bg1) 0%, var(--header-bg3) 50%, var(--header-bg5) 100%);}
+      30% { background-position: 50% 50%; background: linear-gradient(120deg, var(--header-bg2) 0%, var(--header-bg4) 60%, var(--header-bg6) 100%);}
+      60% { background-position: 100% 50%; background: linear-gradient(120deg, var(--header-bg4) 0%, var(--header-bg6) 60%, var(--header-bg2) 100%);}
+      100% { background-position: 0% 50%; background: linear-gradient(120deg, var(--header-bg1) 0%, var(--header-bg3) 50%, var(--header-bg5) 100%);}
+    }
+    .profile-photo-ring {
+      display: inline-block;
+      padding: 7px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffd700 60%, #fff7c0 100%);
+      box-shadow: 0 0 22px #ffd700;
+      margin-bottom: 1.1rem;
+      position: relative;
+      z-index: 3;
+    }
+    .profile-photo {
+      width: 78px;
+      height: 78px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff8c0;
+      box-shadow: 0 0 10px #ffd70099;
+      background: #fff;
+      z-index: 3;
+    }
+    #particles-silver {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      pointer-events: none;
+      z-index: 9;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      overflow: visible;
+    }
+    #typewriter {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.6rem;
+      height: 3.2rem;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      color: #babfc9 !important;
+      background: none;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: .18em solid #babfc9;
+      z-index: 5;
+      position: relative;
+      margin-bottom: 10px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+      padding: .5rem 0;
+      border-radius: 35px;
+      background: var(--glass-bg);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border: 1.5px solid rgba(255, 255, 255, 0.13);
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.13rem;
+      font-weight: bold;
+      padding: .5rem 1.2rem;
+      border-radius: 40px;
+      background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);
+      background-size: 200% 200%;
+      box-shadow: 0 2px 8px rgba(59,130,246,0.10);
+      transition: background 2.5s cubic-bezier(.77,.2,.48,.95), color .18s, box-shadow .18s, border .5s;
+      border: 3px solid transparent;
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      gap: 0.7em;
+      animation: navBgAnim 8s ease-in-out infinite alternate;
+      position: relative;
+      z-index: 2;
+    }
+    @keyframes navBgAnim {
+      0% { background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);}
+      25% { background: linear-gradient(90deg, #ff3562 0%, #e946ff 100%);}
+      50% { background: linear-gradient(90deg, #e946ff 0%, #ff90b3 100%);}
+      75% { background: linear-gradient(90deg, #2563eb 0%, #ff90b3 100%);}
+      100% { background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);}
+    }
+    nav a:focus, nav a:hover {
+      outline: none;
+      color: #fff;
+      border: 3px solid;
+      border-image: linear-gradient(90deg,#ff3562,#e946ff,#ff90b3,#e46ff) 1;
+    }
+    nav a img {
+      width: 1.2em;
+      height: 1.2em;
+      filter: brightness(0) invert(1);
+    }
+    section {
+      padding: 4rem 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .section-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .section-particles-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+    }
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .skill-btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      margin: 0.5rem;
+      border-radius: 20px;
+      background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .skill-btn:hover {
+      transform: scale(1.05);
+    }
+    .project-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin: 1rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: scale(1.02);
+    }
+    .project-card h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+    .project-card img {
+      width: 100%;
+      border-radius: calc(var(--radius) / 2);
+      margin: 1rem 0;
+    }
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .contact-link {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);
+      padding: 12px;
+      transition: transform 0.2s;
+    }
+    .contact-link:hover {
+      transform: scale(1.1);
+    }
+    .contact-link img {
+      width: 100%;
+      height: 100%;
+      filter: brightness(0) invert(1);
+    }
+    .krishna-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .krishna-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      transition: transform 0.3s;
+    }
+    .krishna-card:hover {
+      transform: scale(1.05);
+    }
+    .krishna-img-ring {
+      display: inline-block;
+      padding: 7px;
+      border-radius: 50%;
+      background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);
+      margin-bottom: 1rem;
+    }
+    .krishna-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+    }
+    .spotify-title {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .spotify-widget {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header Section -->
-  <header class="header">
-    <nav class="navbar">
-      <a href="#" class="brand-link">श्रीकृष्ण</a>
-      <ul>
-        <li><a href="#about">परिचय</a></li>
-        <li><a href="#projects">प्रोजेक्ट्स</a></li>
-        <li><a href="#skills">कौशल</a></li>
-        <li><a href="#contact">संपर्क</a></li>
-      </ul>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND8GH3SM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="digital-clock" id="digitalClock"></div>
+  <header>
+    <span class="profile-photo-ring" id="profilePhotoRing">
+      <img src="https://tse1.mm.bing.net/th/id/OIP.lu_FCiCsj-PsKC6DJC-sZwHaHa?pid=ImgDet&w=474&h=474&rs=1&o=7&rm=3" class="profile-photo" alt="Sanika-M Profile Photo">
+      <canvas id="particles-silver"></canvas>
+    </span>
+    <div id="typewriter"></div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#krishna">Krishna Teachings</a>
+      <a href="#my-vibes">My Vibes</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="krishna-overlay">
-      <span class="krishna-text">जय श्री कृष्ण</span>
-    </div>
-    <div class="hero-content">
-      <h1>Sanika Sharma</h1>
-      <p>Vocalist & Product Management Professional</p>
+  <section id="about" class="section-content section-with-particles">
+    <canvas class="section-particles-bg"></canvas>
+    <h2>About Me</h2>
+    <p class="about-text">Hi, I'm Sanika! I'm passionate about music, coding, and exploring new tech. I love creating things that make life easier and more fun.</p>
+  </section>
+  <section id="skills" class="section-content section-with-particles">
+    <canvas class="section-particles-bg"></canvas>
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <a class="skill-btn">HTML</a>
+      <a class="skill-btn">CSS</a>
+      <a class="skill-btn">JavaScript</a>
+      <a class="skill-btn">React</a>
+      <a class="skill-btn">Node.js</a>
     </div>
   </section>
-  <!-- About Section -->
-  <section id="about" class="about-section">
-    <h2>मेरे बारे में</h2>
-    <p>मैं सानिका शर्मा हूँ—संगीत प्रेमी, वोकलिस्ट और प्रोडक्ट मैनेजमेंट की दुनिया में सीखते-समझते आगे बढ़ती हुई।</p>
-    <!-- Krishna Teachings Cards with Glassmorphic Effect -->
-    <div class="krishna-teachings">
-      <div class="card">
+  <section id="projects" class="section-content section-with-particles">
+    <canvas class="section-particles-bg"></canvas>
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Project 1</h3>
+      <img src="https://via.placeholder.com/300" alt="Project 1">
+      <p>A cool project about something.</p>
+    </div>
+  </section>
+  <section id="krishna" class="section-content section-with-particles">
+    <canvas class="section-particles-bg"></canvas>
+    <h2>भगवान कृष्ण के उपदेश</h2>
+    <div class="krishna-cards">
+      <div class="krishna-card" tabindex="0">
+        <span class="krishna-img-ring">
+          <img src="https://w0.peakpx.com/wallpaper/515/135/HD-wallpaper-mahatma-buddha-animated-mahatma-buddha-buddha-animated-lord-buddha-meditating.jpg" class="krishna-img">
+        </span>
         <h3>करुणा</h3>
-        <p>श्रीकृष्ण की करुणा से प्रेरित होकर मैं उपयोगकर्ताओं के लिए सरल, सहज और सुंदर अनुभवों को महत्व देती हूँ।</p>
+        <p>“करुणा से बड़ा कोई धर्म नहीं है।”<br>दूसरों के प्रति सहानुभूति रखें।</p>
       </div>
-      <div class="card">
+      <div class="krishna-card" tabindex="0">
+        <span class="krishna-img-ring">
+          <img src="https://i.pinimg.com/originals/a4/f2/ac/a4f2acb643fabeeb4cc26255a2363698.jpg" alt="Krishna" class="krishna-img">
+        </span>
         <h3>संतुलन</h3>
-        <p>कला और तकनीक के मेल में मुझे आनंद मिलता है—यही मेरी सोच और काम की दिशा है।</p>
+        <p>“जीवन में संतुलन बनाए रखें।”<br>कर्म और फल की चिंता न करें।</p>
       </div>
-      <div class="card">
-        <h3>बुद्धिमत्ता</h3>
-        <p>मैं रणनीति, उपयोगकर्ता अनुसंधान और डिज़ाइन-तकनीक तालमेल में निपुण हूँ।</p>
+      <div class="krishna-card" tabindex="0">
+        <span class="krishna-img-ring">
+          <img src="https://wallpapercave.com/wp/wp5834447.jpg" alt="Krishna" class="krishna-img">
+        </span>
+        <h3>सत्य</h3>
+        <p>“सत्य बोलो।”<br>हर परिस्थिति में सत्य का अनुसरण करें।</p>
       </div>
     </div>
+  </section
+<section id="my-vibes" class="section-content section-with-particles">
+    <canvas class="section-particles-bg"></canvas>
+    <div class="spotify-title">My Vibes</div>
+    <div class="spotify-widget">
+      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7kNjzyrUNVC4UmXcbXUhuH?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
   </section>
-  <!-- Skills Section -->
-  <section id="skills" class="skills-section">
-    <h2>कौशल</h2>
-    <ul>
-      <li>उत्पाद रणनीति</li>
-      <li>उपयोगकर्ता अनुसंधान</li>
-      <li>UX/UI डिज़ाइन</li>
-      <li>डेटा साक्षरता</li>
-      <li>टीम सहयोग</li>
-      <li>समस्या समाधान</li>
-    </ul>
+  <section id="contact" class="section-content section-with-particles" style="position:relative; overflow:hidden;">
+    <canvas class="section-particles-bg"></canvas>
+    <h2>Connect with Me</h2>
+    <div class="contact-links">
+      <a class="contact-link" href="https://instagram.com/sanikasharmamusic" target="_blank" rel="noopener" title="Instagram">
+        <img src="https://pluspng.com/img-png/instagram-icon-png-instagram-icon-1600.png" alt="Instagram Logo">
+      </a>
+      <a class="contact-link" href="https://open.spotify.com/user/31gk45xw6gixm2v4y6wquwmywqpu?si=2c6d4992c6e14f7d" target="_blank" rel="noopener" title="Spotify">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111624.png" alt="Spotify Logo">
+      </a>
+    </div>
   </section>
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <h2>संपर्क</h2>
-    <form>
-      <label for="name">नाम</label>
-      <input type="text" id="name" name="name">
-      <label for="email">ईमेल</label>
-      <input type="email" id="email" name="email">
-      <label for="message">संदेश</label>
-      <textarea id="message" name="message"></textarea>
-      <button type="submit">संदेश भेजें</button>
-    </form>
-  </section>
-  <!-- Footer Section -->
-  <footer class="footer">
-    <p>© 2026 • कृष्ण से प्रेरित • प्रेम और करुणा के साथ निर्मित</p>
-  </footer>
-  <!-- Autoplay BGM with Hidden Controls -->
-  <audio id="bgm" autoplay loop>
-    <source src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Hare_Krishna_Maha_Mantra.ogg" type="audio/ogg">
-    <source src="https://cdn.pixabay.com/download/audio/2022/04/18/audio_d1a64a1e4f.mp3?filename=indian-flute-ambient-110058.mp3" type="audio/mpeg">
-  </audio>
   <script>
-    // Autoplay BGM with fallback for browsers that block autoplay
-    const bgm = document.getElementById('bgm');
-    bgm.volume = 0.4; // adjust volume (0.0 to 1.0)
+    // Digital Clock
+    function updateClock() {
+      const now = new Date();
+      let hours = now.getHours().toString().padStart(2, '0');
+      let minutes = now.getMinutes().toString().padStart(2, '0');
+      let seconds = now.getSeconds().toString().padStart(2, '0');
+      document.getElementById('digitalClock').textContent = `${hours}:${minutes}:${seconds}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
 
-    // Try to play audio on page load
-    bgm.play().catch(() => {
-      // If autoplay is blocked, try playing on user interaction
-      document.addEventListener('click', () => {
-        bgm.play();
-      }, { once: true });
-    });
+    // Typewriter Effect
+    const typewriter = document.getElementById('typewriter');
+    const nameText = "Sanika - M";
+    let i = 0;
+    function typeEffect() {
+      if (i < nameText.length) {
+        typewriter.innerHTML += nameText.charAt(i);
+        i++;
+        setTimeout(typeEffect, 150);
+      }
+    }
+    typeEffect();
+
+    // Particles
+    const silverCanvas = document.getElementById('particles-silver');
+    const silverCtx = silverCanvas.getContext('2d');
+    let silverParticles = [];
+    function initSilverParticles() {
+      silverCanvas.width = 110;
+      silverCanvas.height = 110;
+      silverParticles = [];
+      for (let i = 0; i < 30; i++) {
+        silverParticles.push({
+          x: Math.random() * silverCanvas.width,
+          y: Math.random() * silverCanvas.height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5,
+          r: Math.random() * 1.5 + 0.5
+        });
+      }
+    }
+    function drawSilverParticles() {
+      silverCtx.clearRect(0, 0, silverCanvas.width, silverCanvas.height);
+      silverCtx.fillStyle = 'rgba(186, 191, 201, 0.8)';
+      silverParticles.forEach(p => {
+        silverCtx.beginPath();
+        silverCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        silverCtx.fill();
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < 0 || p.x > silverCanvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > silverCanvas.height) p.vy *= -1;
+      });
+      requestAnimationFrame(drawSilverParticles);
+    }
+    initSilverParticles();
+    drawSilverParticles();
   </script>
 </body>
 </html>
