@@ -1,4 +1,3 @@
-/* See previous response for full CSS. Key features: circular Buddha/Shiva images, gray Suryansh-X text (via #typewriter), animated gradients, etc. */
 :root {
   --radius: 20px;
   --header-bg1: #2b62f6;
@@ -17,6 +16,7 @@
   --orange: #f59e42;
   --blue: #2563eb;
 }
+
 body {
   margin: 0;
   font-family: 'Roboto', Arial, sans-serif;
@@ -26,6 +26,7 @@ body {
   overflow-x: hidden;
   position: relative;
 }
+
 .digital-clock {
   position: fixed;
   top: 24px;
@@ -45,11 +46,18 @@ body {
   transition: background 9s;
   animation: clockBgAnim 9s infinite alternate;
 }
+
 @keyframes clockBgAnim {
-  0%   { background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);}
-  50%  { background: linear-gradient(90deg, #2563eb 0%, #ff3562 100%);}
+  0% { background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);}
+  50% { background: linear-gradient(90deg, #2563eb 0%, #ff3562 100%);}
   100% { background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);}
 }
+
+.digital-clock:hover {
+  animation-play-state: paused;
+  background: linear-gradient(90deg, #ff3562 0%, #e946ff 100%);
+}
+
 header {
   text-align: center;
   padding: 2.7rem 1rem 1.3rem;
@@ -63,12 +71,14 @@ header {
   position: relative;
   overflow: visible;
 }
+
 @keyframes headerBgAnim {
-  0%   { background-position: 0% 50%; }
-  30%  { background-position: 50% 50%; }
-  60%  { background-position: 100% 50%; }
+  0% { background-position: 0% 50%; }
+  30% { background-position: 50% 50%; }
+  60% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
 .profile-photo-ring {
   display: inline-block;
   padding: 7px;
@@ -79,6 +89,7 @@ header {
   position: relative;
   z-index: 3;
 }
+
 .profile-photo {
   width: 78px;
   height: 78px;
@@ -89,6 +100,7 @@ header {
   background: #fff;
   z-index: 3;
 }
+
 #particles-silver {
   position: absolute;
   left: 50%;
@@ -101,6 +113,7 @@ header {
   border-radius: 50%;
   overflow: visible;
 }
+
 #typewriter {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.6rem;
@@ -117,6 +130,7 @@ header {
   position: relative;
   margin-bottom: 10px;
 }
+
 nav {
   display: flex;
   justify-content: center;
@@ -130,6 +144,7 @@ nav {
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1.5px solid rgba(255, 255, 255, 0.13);
 }
+
 nav a {
   color: #fff;
   text-decoration: none;
@@ -149,6 +164,7 @@ nav a {
   position: relative;
   z-index: 2;
   animation: navGradAnim 14s ease-in-out infinite alternate;
+  cursor: pointer;
 }
 
 @keyframes navGradAnim {
@@ -156,7 +172,7 @@ nav a {
   50% {background-position: 100% 50%;}
   100% {background-position: 0% 50%;}
 }
-}
+
 nav a:focus, nav a:hover {
   outline: none;
   color: #fff;
@@ -165,11 +181,13 @@ nav a:focus, nav a:hover {
   animation: navBtnGradient 4.5s ease-in-out infinite alternate;
   box-shadow: 0 0 0 8px #ff3562aa;
 }
+
 @keyframes navBtnGradient {
   0% {border-image: radial-gradient(90deg,#ff3562,#e946ff,#ff90b3) 1;}
   50% {border-image: radial-gradient(270deg,#e946ff,#ff90b3,#ff3562) 1;}
   100% {border-image: radial-gradient(90deg,#ff3562,#e946ff,#ff90b3) 1;}
 }
+
 .buddha-img, .shiv-img {
   width: 108px;
   height: 108px;
@@ -180,6 +198,7 @@ nav a:focus, nav a:hover {
   background: #fff;
   margin-bottom: 0.6em;
 }
+
 #typewriter {
   color: #babfc9 !important;
 }
