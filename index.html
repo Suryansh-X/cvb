@@ -5,469 +5,595 @@
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-ND8GH3SM');</script>
   <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
-  <title>Sanika - M | Portfolio</title>
+  <title>Sanika-V | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&family=Baloo+2:wght@700&family=Hind:wght@500&display=swap" rel="display:stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&family=Baloo+2:wght@700&family=Hind:wght@500&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --radius: 20px;
-      --header-bg1: #2b62f6;
-      --header-bg2: #f59e42;
-      --header-bg3: #c0a4ff;
-      --header-bg4: #ffd8ec;
-      --header-bg5: #f7ad65;
-      --header-bg6: #6b9cff;
-      --card-bg: #23253a;
-      --text: #f3f3f7;
-      --accent: #f59e42;
-      --gold: #ffd700;
-      --silver: #babfc9;
-      --glass-bg: rgba(36, 40, 56, 0.32);
-      --glass-blur: blur(18px);
-      --orange: #f59e42;
-      --blue: #2563eb;
-    }
-    body {
-      margin: 0;
-      font-family: 'Roboto', Arial, sans-serif;
-      min-height: 100vh;
-      color: var(--text);
-      background: #18181b;
-      overflow-x: hidden;
-      position: relative;
-    }
-    .digital-clock {
-      position: fixed;
-      top: 24px;
-      right: 38px;
-      z-index: 9999;
-      background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);
-      color: #fff;
-      padding: 0.6em 1em;
-      font-family: 'Montserrat', 'Roboto Mono', monospace;
-      font-size: 1.35em;
-      font-weight: 700;
-      border-radius: 18px;
-      box-shadow: 0 2px 18px #ff356244;
-      letter-spacing: 2.5px;
-      user-select: none;
-      border: none;
-      transition: background 9s;
-      animation: clockBgAnim 9s infinite alternate;
-    }
-    @keyframes clockBgAnim {
-      0% { background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);}
-      50% { background: linear-gradient(90deg, #2563eb 0%, #ff3562 100%);}
-      100% { background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);}
-    }
-    header {
-      text-align: center;
-      padding: 2.7rem 1rem 1.3rem;
-      background: linear-gradient(120deg, var(--header-bg1) 0%, var(--header-bg3) 50%, var(--header-bg5) 100%);
-      background-size: 200% 200%;
-      animation: headerBgAnim 14s ease-in-out infinite alternate;
-      color: #fff;
-      border-bottom-left-radius: var(--radius);
-      border-bottom-right-radius: var(--radius);
-      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-      position: relative;
-      overflow: visible;
-    }
-    @keyframes headerBgAnim {
-      0% { background-position: 0% 50%; background: linear-gradient(120deg, var(--header-bg1) 0%, var(--header-bg3) 50%, var(--header-bg5) 100%);}
-      30% { background-position: 50% 50%; background: linear-gradient(120deg, var(--header-bg2) 0%, var(--header-bg4) 60%, var(--header-bg6) 100%);}
-      60% { background-position: 100% 50%; background: linear-gradient(120deg, var(--header-bg4) 0%, var(--header-bg6) 60%, var(--header-bg2) 100%);}
-      100% { background-position: 0% 50%; background: linear-gradient(120deg, var(--header-bg1) 0%, var(--header-bg3) 50%, var(--header-bg5) 100%);}
-    }
-    .profile-photo-ring {
-      display: inline-block;
-      padding: 7px;
-      border-radius: 50%;
-      background: radial-gradient(circle, #ffd700 60%, #fff7c0 100%);
-      box-shadow: 0 0 22px #ffd700;
-      margin-bottom: 1.1rem;
-      position: relative;
-      z-index: 3;
-    }
-    .profile-photo {
-      width: 78px;
-      height: 78px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #fff8c0;
-      box-shadow: 0 0 10px #ffd70099;
-      background: #fff;
-      z-index: 3;
-    }
-    #particles-silver {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%,-50%);
-      pointer-events: none;
-      z-index: 9;
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      overflow: visible;
-    }
-    #typewriter {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2.6rem;
-      height: 3.2rem;
-      letter-spacing: 1.5px;
-      font-weight: 700;
-      color: #babfc9 !important;
-      background: none;
-      display: inline-block;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: .18em solid #babfc9;
-      z-index: 5;
-      position: relative;
-      margin-bottom: 10px;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 1rem;
-      padding: .5rem 0;
-      border-radius: 35px;
-      background: var(--glass-bg);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-      backdrop-filter: var(--glass-blur);
-      -webkit-backdrop-filter: var(--glass-blur);
-      border: 1.5px solid rgba(255, 255, 255, 0.13);
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1.13rem;
-      font-weight: bold;
-      padding: .5rem 1.2rem;
-      border-radius: 40px;
-      background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);
-      background-size: 200% 200%;
-      box-shadow: 0 2px 8px rgba(59,130,246,0.10);
-      transition: background 2.5s cubic-bezier(.77,.2,.48,.95), color .18s, box-shadow .18s, border .5s;
-      border: 3px solid transparent;
-      backdrop-filter: blur(12px);
-      display: flex;
-      align-items: center;
-      gap: 0.7em;
-      animation: navBgAnim 8s ease-in-out infinite alternate;
-      position: relative;
-      z-index: 2;
-    }
-    @keyframes navBgAnim {
-      0% { background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);}
-      25% { background: linear-gradient(90deg, #ff3562 0%, #e946ff 100%);}
-      50% { background: linear-gradient(90deg, #e946ff 0%, #ff90b3 100%);}
-      75% { background: linear-gradient(90deg, #2563eb 0%, #ff90b3 100%);}
-      100% { background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);}
-    }
-    nav a:focus, nav a:hover {
-      outline: none;
-      color: #fff;
-      border: 3px solid;
-      border-image: linear-gradient(90deg,#ff3562,#e946ff,#ff90b3,#e46ff) 1;
-    }
-    nav a img {
-      width: 1.2em;
-      height: 1.2em;
-      filter: brightness(0) invert(1);
-    }
-    section {
-      padding: 4rem 1rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .section-content {
-      max-width: 800px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 2;
-    }
-    .section-particles-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      pointer-events: none;
-    }
-    h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-      background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
-    }
-    .about-text {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      text-align: center;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .skill-btn {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      margin: 0.5rem;
-      border-radius: 20px;
-      background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-      transition: transform 0.2s;
-    }
-    .skill-btn:hover {
-      transform: scale(1.05);
-    }
-    .project-card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      margin: 1rem;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-      transition: transform 0.3s;
-    }
-    .project-card:hover {
-      transform: scale(1.02);
-    }
-    .project-card h3 {
-      margin-top: 0;
-      color: var(--accent);
-    }
-    .project-card img {
-      width: 100%;
-      border-radius: calc(var(--radius) / 2);
-      margin: 1rem 0;
-    }
-    .contact-links {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .contact-link {
-      display: inline-block;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);
-      padding: 12px;
-      transition: transform 0.2s;
-    }
-    .contact-link:hover {
-      transform: scale(1.1);
-    }
-    .contact-link img {
-      width: 100%;
-      height: 100%;
-      filter: brightness(0) invert(1);
-    }
-    .krishna-cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .krishna-card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      width: 250px;
-      text-align: center;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
-      transition: transform 0.3s;
-    }
-    .krishna-card:hover {
-      transform: scale(1.05);
-    }
-    .krishna-img-ring {
-      display: inline-block;
-      padding: 7px;
-      border-radius: 50%;
-      background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);
-      margin-bottom: 1rem;
-    }
-    .krishna-img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #fff;
-    }
-    .spotify-title {
-      text-align: center;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    .spotify-widget {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-  </style>
-</head>
-<body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND8GH3SM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <div class="digital-clock" id="digitalClock"></div>
-  <header>
-    <span class="profile-photo-ring" id="profilePhotoRing">
-      <img src="https://tse1.mm.bing.net/th/id/OIP.lu_FCiCsj-PsKC6DJC-sZwHaHa?pid=ImgDet&w=474&h=474&rs=1&o=7&rm=3" class="profile-photo" alt="Sanika-M Profile Photo">
-      <canvas id="particles-silver"></canvas>
-    </span>
-    <div id="typewriter"></div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#krishna">Krishna Teachings</a>
-      <a href="#my-vibes">My Vibes</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-  <section id="about" class="section-content section-with-particles">
-    <canvas class="section-particles-bg"></canvas>
-    <h2>About Me</h2>
-    <p class="about-text">Hi, I'm Sanika! I'm passionate about music, coding, and exploring new tech. I love creating things that make life easier and more fun.</p>
-  </section>
-  <section id="skills" class="section-content section-with-particles">
-    <canvas class="section-particles-bg"></canvas>
-    <h2>Skills</h2>
-    <div class="skills-container">
-      <a class="skill-btn">HTML</a>
-      <a class="skill-btn">CSS</a>
-      <a class="skill-btn">JavaScript</a>
-      <a class="skill-btn">React</a>
-      <a class="skill-btn">Node.js</a>
-    </div>
-  </section>
-  <section id="projects" class="section-content section-with-particles">
-    <canvas class="section-particles-bg"></canvas>
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>Project 1</h3>
-      <img src="https://via.placeholder.com/300" alt="Project 1">
-      <p>A cool project about something.</p>
-    </div>
-  </section>
-  <section id="krishna" class="section-content section-with-particles">
-    <canvas class="section-particles-bg"></canvas>
-    <h2>भगवान कृष्ण के उपदेश</h2>
-    <div class="krishna-cards">
-      <div class="krishna-card" tabindex="0">
-        <span class="krishna-img-ring">
-          <img src="https://w0.peakpx.com/wallpaper/515/135/HD-wallpaper-mahatma-buddha-animated-mahatma-buddha-buddha-animated-lord-buddha-meditating.jpg" class="krishna-img">
-        </span>
-        <h3>करुणा</h3>
-        <p>“करुणा से बड़ा कोई धर्म नहीं है।”<br>दूसरों के प्रति सहानुभूति रखें।</p>
-      </div>
-      <div class="krishna-card" tabindex="0">
-        <span class="krishna-img-ring">
-          <img src="https://i.pinimg.com/originals/a4/f2/ac/a4f2acb643fabeeb4cc26255a2363698.jpg" alt="Krishna" class="krishna-img">
-        </span>
-        <h3>संतुलन</h3>
-        <p>“जीवन में संतुलन बनाए रखें।”<br>कर्म और फल की चिंता न करें।</p>
-      </div>
-      <div class="krishna-card" tabindex="0">
-        <span class="krishna-img-ring">
-          <img src="https://wallpapercave.com/wp/wp5834447.jpg" alt="Krishna" class="krishna-img">
-        </span>
-        <h3>सत्य</h3>
-        <p>“सत्य बोलो।”<br>हर परिस्थिति में सत्य का अनुसरण करें।</p>
-      </div>
-    </div>
-  </section
-<section id="my-vibes" class="section-content section-with-particles">
-    <canvas class="section-particles-bg"></canvas>
-    <div class="spotify-title">My Vibes</div>
-    <div class="spotify-widget">
-      <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7kNjzyrUNVC4UmXcbXUhuH?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
-  </section>
-  <section id="contact" class="section-content section-with-particles" style="position:relative; overflow:hidden;">
-    <canvas class="section-particles-bg"></canvas>
-    <h2>Connect with Me</h2>
-    <div class="contact-links">
-      <a class="contact-link" href="https://instagram.com/sanikasharmamusic" target="_blank" rel="noopener" title="Instagram">
-        <img src="https://pluspng.com/img-png/instagram-icon-png-instagram-icon-1600.png" alt="Instagram Logo">
-      </a>
-      <a class="contact-link" href="https://open.spotify.com/user/31gk45xw6gixm2v4y6wquwmywqpu?si=2c6d4992c6e14f7d" target="_blank" rel="noopener" title="Spotify">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111624.png" alt="Spotify Logo">
-      </a>
-    </div>
-  </section>
-  <script>
-    // Digital Clock
-    function updateClock() {
-      const now = new Date();
-      let hours = now.getHours().toString().padStart(2, '0');
-      let minutes = now.getMinutes().toString().padStart(2, '0');
-      let seconds = now.getSeconds().toString().padStart(2, '0');
-      document.getElementById('digitalClock').textContent = `${hours}:${minutes}:${seconds}`;
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
-
-    // Typewriter Effect
-    const typewriter = document.getElementById('typewriter');
-    const nameText = "Sanika - M";
-    let i = 0;
-    function typeEffect() {
-      if (i < nameText.length) {
-        typewriter.innerHTML += nameText.charAt(i);
-        i++;
-        setTimeout(typeEffect, 150);
-      }
-    }
-    typeEffect();
-
-    // Particles
-    const silverCanvas = document.getElementById('particles-silver');
-    const silverCtx = silverCanvas.getContext('2d');
-    let silverParticles = [];
-    function initSilverParticles() {
-      silverCanvas.width = 110;
-      silverCanvas.height = 110;
-      silverParticles = [];
-      for (let i = 0; i < 30; i++) {
-        silverParticles.push({
-          x: Math.random() * silverCanvas.width,
-          y: Math.random() * silverCanvas.height,
-          vx: (Math.random() - 0.5) * 0.5,
-          vy: (Math.random() - 0.5) * 0.5,
-          r: Math.random() * 1.5 + 0.5
-        });
-      }
-    }
-    function drawSilverParticles() {
-      silverCtx.clearRect(0, 0, silverCanvas.width, silverCanvas.height);
-      silverCtx.fillStyle = 'rgba(186, 191, 201, 0.8)';
-      silverParticles.forEach(p => {
-        silverCtx.beginPath();
-        silverCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        silverCtx.fill();
-        p.x += p.vx;
-        p.y += p.vy;
-        if (p.x < 0 || p.x > silverCanvas.width) p.vx *= -1;
-        if (p.y < 0 || p.y > silverCanvas.height) p.vy *= -1;
-      });
-      requestAnimationFrame(drawSilverParticles);
-    }
-    initSilverParticles();
-    drawSilverParticles();
-  </script>
-</body>
+    :root { 
+      --radius: 20px; 
+      --header-bg1: #2b62f6; 
+      --header-bg2: #f59e42; 
+      --header-bg3: #c0a4ff; 
+      --header-bg4: #ffd8ec; 
+      --header-bg5: #f7ad65; 
+      --header-bg6: #6b9cff; 
+      --card-bg: #23253a; 
+      --text: #f3f3f7; 
+      --accent: #f59e42; 
+      --gold: #ffd700; 
+      --silver: #babfc9; 
+      --glass-bg: rgba(36, 40, 56, 0.32); 
+      --glass-blur: blur(18px); 
+      --orange: #f59e42; 
+      --blue: #2563eb; 
+    } 
+    body { 
+      margin: 0; 
+      font-family: 'Roboto', Arial, sans-serif; 
+      min-height: 100vh; 
+      color: var(--text); 
+      background: #18181b; 
+      overflow-x: hidden; 
+      position: relative; 
+    } 
+    .digital-clock { 
+      position: fixed; 
+      top: 24px; 
+      right: 38px; 
+      z-index: 9999; 
+      background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%); 
+      color: #fff; 
+      padding: 0.6em 1em; 
+      font-family: 'Montserrat', 'Roboto Mono', monospace; 
+      font-size: 1.35em; 
+      font-weight: 700; 
+      border-radius: 18px; 
+      box-shadow: 0 2px 18px #ff356244; 
+      letter-spacing: 2.5px; 
+      user-select: none; 
+      border: none; 
+      transition: background 9s; 
+      animation: clockBgAnim 9s infinite alternate; 
+    } 
+    @keyframes clockBgAnim { 
+      0% { background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);} 
+      50% { background: linear-gradient(90deg, #2563eb 0%, #ff3562 100%);} 
+      100% { background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);} 
+    } 
+    header { 
+      text-align: center; 
+      padding: 2.7rem 1rem 1.3rem; 
+      background: linear-gradient(120deg, var(--header-bg1) 0%, var(--header-bg3) 50%, var(--header-bg5) 100%); 
+      background-size: 200% 200%; 
+      animation: headerBgAnim 14s ease-in-out infinite alternate; 
+      color: #fff; 
+      border-bottom-left-radius: var(--radius); 
+      border-bottom-right-radius: var(--radius); 
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12); 
+      position: relative; 
+      overflow: visible; 
+    } 
+    @keyframes headerBgAnim { 
+      0% { background-position: 0% 50%; background: linear-gradient(120deg, var(--header-bg1) 0%, var(--header-bg3) 50%, var(--header-bg5) 100%);} 
+      30% { background-position: 50% 50%; background: linear-gradient(120deg, var(--header-bg2) 0%, var(--header-bg4) 60%, var(--header-bg6) 100%);} 
+      60% { background-position: 100% 50%; background: linear-gradient(120deg, var(--header-bg4) 0%, var(--header-bg6) 60%, var(--header-bg2) 100%);} 
+      100% { background-position: 0% 50%; background: linear-gradient(120deg, var(--header-bg1) 0%, var(--header-bg3) 50%, var(--header-bg5) 100%);} 
+    } 
+    .profile-photo-ring { 
+      display: inline-block; 
+      padding: 7px; 
+      border-radius: 50%; 
+      background: radial-gradient(circle, #ffd700 60%, #fff7c0 100%); 
+      box-shadow: 0 0 22px #ffd700; 
+      margin-bottom: 1.1rem; 
+      position: relative; 
+      z-index: 3; 
+    } 
+    .profile-photo { 
+      width: 78px; 
+      height: 78px; 
+      border-radius: 50%; 
+      object-fit: cover; 
+      border: 3px solid #fff8c0; 
+      box-shadow: 0 0 10px #ffd70099; 
+      background: #fff; 
+      z-index: 3; 
+    } 
+    #particles-silver { 
+      position: absolute; 
+      left: 50%; 
+      top: 50%; 
+      transform: translate(-50%,-50%); 
+      pointer-events: none; 
+      z-index: 9; 
+      width: 110px; 
+      height: 110px; 
+      border-radius: 50%; 
+      overflow: visible; 
+    } 
+    #typewriter { 
+      font-family: 'Montserrat', sans-serif; 
+      font-size: 2.6rem; 
+      height: 3.2rem; 
+      letter-spacing: 1.5px; 
+      font-weight: 700; 
+      color: #babfc9 !important; 
+      background: none; 
+      display: inline-block; 
+      white-space: nowrap; 
+      overflow: hidden; 
+      border-right: .18em solid #babfc9; 
+      z-index: 5; 
+      position: relative; 
+      margin-bottom: 10px; 
+    } 
+    nav { 
+      display: flex; 
+      justify-content: center; 
+      gap: 2rem; 
+      margin-top: 1rem; 
+      padding: .5rem 0; 
+      border-radius: 35px; 
+      background: var(--glass-bg); 
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15); 
+      backdrop-filter: var(--glass-blur); 
+      -webkit-backdrop-filter: var(--glass-blur); 
+      border: 1.5px solid rgba(255, 255, 255, 0.13); 
+    } 
+    nav a { 
+      color: #fff; 
+      text-decoration: none; 
+      font-size: 1.13rem; 
+      font-weight: bold; 
+      padding: .5rem 1.2rem; 
+      border-radius: 40px; 
+      background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%); 
+      background-size: 200% 200%; 
+      box-shadow: 0 2px 8px rgba(59,130,246,0.10); 
+      transition: background 2.5s cubic-bezier(.77,.2,.48,.95), color .18s, box-shadow .18s, border .5s; 
+      border: 3px solid transparent; 
+      backdrop-filter: blur(12px); 
+      display: flex; 
+      align-items: center; 
+      gap: 0.7em; 
+      animation: navBgAnim 8s ease-in-out infinite alternate; 
+      position: relative; 
+      z-index: 2; 
+    } 
+    @keyframes navBgAnim { 
+      0% { background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);} 
+      25% { background: linear-gradient(90deg, #ff3562 0%, #e946ff
+ nav a:focus, nav a:hover { 
+      outline: none; 
+      color: #fff; 
+      border: 3px solid; 
+      border-image: linear-gradient(90deg,#ff3562,#e946ff,#ff90b3,#e946ff,#ff3562) 1; 
+      animation: navBtnGradient 1.5s linear infinite; 
+      box-shadow: 0 0 0 8px #ff3562aa; 
+    } 
+    @keyframes navBtnGradient { 
+      0% {border-image: linear-gradient(90deg,#ff3562,#e946ff,#ff90b3) 1;} 
+      50% {border-image: linear-gradient(270deg,#e946ff,#ff90b3,#ff3562) 1;} 
+      100% {border-image: linear-gradient(90deg,#ff3562,#e946ff,#ff90b3) 1;} 
+    } 
+    main { 
+      max-width: 960px; 
+      margin: auto; 
+      padding: 2rem 1rem 0; 
+    } 
+    .section-content { 
+      position: relative; 
+      z-index: 2; 
+      background: var(--card-bg); 
+      border-radius: var(--radius); 
+      box-shadow: 0 2px 14px rgba(0,0,0,0.10); 
+      padding: 2.2rem 1.2rem; 
+      margin-bottom: 3rem; 
+      overflow: hidden; 
+      border: 4px solid transparent; 
+      border-image: linear-gradient(120deg,#ff90b3,#ff3562,#2563eb,#e946ff,#ff3562) 1; 
+      animation: sectionBorderAnim 7s ease-in-out infinite alternate; 
+      opacity: 0; 
+      transform: translateY(60px); 
+      transition: opacity 0.9s cubic-bezier(.55,.06,.68,.19), transform 0.9s cubic-bezier(.55,.06,.68,.19); 
+    } 
+    @keyframes sectionBorderAnim { 
+      0% { border-image: linear-gradient(120deg,#ff90b3,#ff3562,#2563eb,#e946ff,#ff3562) 1; } 
+      40% { border-image: linear-gradient(120deg,#2563eb,#ff90b3,#e946ff,#ff3562,#ff3562) 1; } 
+      70% { border-image: linear-gradient(120deg,#e946ff,#ff3562,#ff90b3,#2563eb,#e946ff) 1; } 
+      100% { border-image: linear-gradient(120deg,#ff90b3,#ff3562,#2563eb,#e946ff,#ff3562) 1; } 
+    } 
+    .section-content.visible { 
+      opacity: 1; 
+      transform: translateY(0); 
+      transition: opacity 1.1s cubic-bezier(.55,.06,.68,.19), transform 1.1s cubic-bezier(.55,.06,.68,.19); 
+    } 
+    .section-particles-bg { 
+      position: absolute; 
+      z-index: 0; 
+      pointer-events: none; 
+      border-radius: var(--radius); 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      opacity: .38; 
+      filter: blur(.2px); 
+      background: transparent; 
+    } 
+    #buddha.section-content { 
+      background: url('https://png.pngtree.com/png-clipart/20221022/original/pngtree-gold-flower-pattern-png-image_8706677.png') repeat, var(--card-bg); 
+      background-size: 180px, cover; 
+    } 
+    #shiv.section-content { 
+      background: linear-gradient(135deg, #18181b 50%, #ffd700 100%); 
+      border: 3px solid #ffd70044; 
+      box-shadow: 0 0 18px #ffd70033; 
+    } 
+    #skills.section-content { 
+      background: linear-gradient(135deg, #23253a 80%, #e2d7f2 100%), url('https://png.pngtree.com/png-clipart/20221022/original/pngtree-gold-flower-pattern-png-image_8706677.png'); 
+      background-size: cover, 140px; 
+      background-repeat: no-repeat, repeat; 
+      background-blend-mode: screen; 
+    } 
+    .skills-list { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 1.1rem; 
+      margin-top: .8rem; 
+      margin-bottom: .5rem; 
+      justify-content: center; 
+    } 
+    .skill-btn { 
+      border: none; 
+      outline: none; 
+      font-size: 1rem; 
+      font-weight: 500; 
+      padding: .55rem 1.22rem; 
+      margin: 0; 
+      border-radius: 30px; 
+      color: #fff; 
+      cursor: pointer; 
+      font-family: 'Montserrat', sans-serif; 
+      box-shadow: 0 1px 8px rgba(59,130,246,.07); 
+      transition: box-shadow .2s, border .4s; 
+      position: relative; 
+      overflow: hidden; 
+      border: 3px solid transparent; 
+      background: linear-gradient(90deg, #2563eb 0%, #e946ff 100%); 
+      background-size: 200% 200%; 
+      animation: skillColorAnim 5s ease-in-out infinite alternate; 
+    } 
+    @keyframes skillColorAnim { 
+      0% { background: linear-gradient(90deg, #2563eb 0%, #e946ff 100%);} 
+      30% { background: linear-gradient(90deg, #e946ff 0%, #ff90b3 100%);} 
+      60% { background: linear-gradient(90deg, #ff90b3 0%, #2563eb 100%);} 
+      100% { background: linear-gradient(90deg, #2563eb 0%, #e946ff 100%);} 
+    } 
+    .skill-btn:focus, .skill-btn:hover { 
+      outline: none; 
+      border: 3px solid; 
+      border-image: linear-gradient(90deg, #2563eb, #e946ff, #ff90b3) 1; 
+      box-shadow: 0 0 0 8px #e946ff55; 
+    } 
+    #contact.section-content { 
+      background: #23253a; 
+    } 
+    .contact-links { 
+      display: flex; 
+      gap: 1.5rem; 
+      margin-top: 1.2rem; 
+      flex-wrap: wrap; 
+      justify-content: center; 
+    } 
+    .contact-link { 
+      background: var(--blue); 
+      color: #fff; 
+      border-radius: 50%; 
+      width: 52px; 
+      height: 52px; 
+      font-size: 2em; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      border: 3px solid transparent; 
+      transition: box-shadow .19s, background .7s, border .4s; 
+      box-shadow: 0 2px 8px rgba(59,130,246,.14); 
+      outline: none; 
+      text-decoration: none; 
+      animation: contactColorAnim 1s infinite alternate; 
+      background-size: cover; 
+      background-position: center; 
+    } 
+    @keyframes contactColorAnim { 
+      0% { background: var(--orange);} 
+      50% { background: var(--blue);} 
+      100% { background: var(--orange);} 
+    } 
+    .contact-link img { 
+      width: 32px; 
+      height: 32px; 
+      object-fit: contain; 
+      border-radius: 10px; 
+      display: block; 
+      background: none; 
+      margin: 0 auto; 
+      box-shadow: none; 
+    } 
+    .contact-link:focus, .contact-link:hover { 
+      outline: none; 
+      border: 3px solid; 
+      border-image: linear-gradient(90deg, var(--blue), var(--orange)) 1; 
+      box-shadow: 0 0 0 8px #32ffc622; 
+      color: #fff; 
+    } 
+    .buddha-img, .shiv-img { 
+      width: 108px; 
+      height: 108px; 
+      border-radius: 50%; 
+      object-fit: cover; 
+      border: 3px solid #fff8c0; 
+      box-shadow: 0 0 14px #ffd70099; 
+      background: #fff; 
+      margin-bottom: 0.6em; 
+    } 
+    .buddha-cards, .shiv-cards { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap:2.4rem; 
+      justify-content: center; 
+      align-items: stretch; 
+      margin-bottom: 2rem; 
+    } 
+    .buddha-card, .shiv-card { 
+      background: #1c203d; 
+      border-radius: 32px; 
+      box-shadow: 0 2px 22px rgba(255,215,0,0.13); 
+      padding: 2rem 1.2rem 2.2rem 1.2rem; 
+      width: 300px; 
+      min-width: 220px; 
+      text-align: center; 
+      transition: box-shadow .27s, transform .27s, border .3s; 
+      cursor: pointer; 
+      position: relative; 
+      outline: none; 
+      border: 3px solid transparent; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: flex-start; 
+      box-shadow: 0 2px 32px #ffd70022, 0 2px 24px #babfc911; 
+    } 
+    .buddha-card:focus, .buddha-card:hover, .shiv-card:focus, .shiv-card:hover { 
+      box-shadow: 0 0 0 6px #ffd70022, 0 8px 40px rgba(245,158,66,.18); 
+      border: 3px solid; 
+      border-image: linear-gradient(90deg, #ffd700, #f59e42) 1; 
+      animation: borderGradient 1s linear infinite; 
+    } 
+    @keyframes borderGradient { 
+      0% { border-image: linear-gradient(90deg, #2563eb, #f59e42) 1;} 
+      50% { border-image: linear-gradient(270deg, #f59e42, #2563eb) 1;} 
+      100% { border-image: linear-gradient(90deg, #2563eb, #f59e42) 1;} 
+    } 
+    .buddha-img-ring, .shiv-img-ring { 
+      display: inline-block; 
+      padding: 7px; 
+      border-radius: 50%; 
+      background: radial-gradient(circle, #ffd700 60%, #fff7c0 100%); 
+      box-shadow: 0 0 28px #ffd700; 
+      margin-bottom: 1.2rem; 
+      transition: box-shadow .2s; 
+    } 
+    .buddha-card:hover .buddha-img-ring, .shiv-card:hover .shiv-img-ring { 
+      box-shadow: 0 0 40px #ffd700; 
+    } 
+    .buddha-card h3, .shiv-card h3 { 
+      font-family: 'Baloo 2', 'Montserrat', sans-serif; 
+      font-size: 1.3rem; 
+      color: var(--gold); 
+      margin: .2rem 0 .8rem 0; 
+      text-shadow: 0 1px 12px #ffd70033; 
+      letter-spacing: 1.2px; 
+      font-weight: 700; 
+      display: flex; 
+      align-items: center; 
+      gap: 0.5em; 
+      justify-content: center; 
+    } 
+    .buddha-card p, .shiv-card p { 
+      font-size: 1.09rem; 
+      color: #fffbe9; 
+      margin-bottom: 0.6rem; 
+      font-family: 'Hind', 'Noto Sans Devanagari', 'Roboto', Arial, sans-serif; 
+      font-weight: 500; 
+      line-height: 1.65; 
+      letter-spacing: .8px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      gap: 0.5em; 
+    } 
+    .projects-grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+      gap: 1.8rem; 
+    } 
+    .project-card { 
+      background: #23244d; 
+      border-radius: var(--radius); 
+      box-shadow: 0 2px 12px rgba(59,130,246,0.09); 
+      padding: 1.6rem 1.2rem 1rem 1.2rem; 
+      display: flex; 
+      flex-direction: column; 
+      align-items: flex-start; 
+      transition: box-shadow .2s, transform .2s, background .8s; 
+      position: relative; 
+      overflow: hidden; 
+    } 
+    .project-card h3 { 
+      font-size: 1.15rem; 
+      color: var(--accent); 
+      margin: .2rem 0 .6rem 0; 
+      font-family: 'Montserrat', sans-serif; 
+      text-shadow: 0 1px 8px #18181b44; 
+      display: flex; 
+      align-items: center; 
+      gap: 0.5em; 
+    } 
+    .project-card p { 
+      font-size: .98rem; 
+      margin: 0 0 .7rem 0; 
+      color: #f5f4f8; 
+      display: flex; 
+      align-items: center; 
+      gap: 0.5em; 
+    } 
+    .project-card a { 
+      color: var(--accent); 
+      font-weight: 500; 
+      text-decoration: none; 
+      transition: color .2s; 
+      display: flex; 
+      align-items: center; 
+      gap: 0.7em; 
+      font-size: 1.05em; 
+    } 
+    .project-card a:hover { 
+      text-decoration: underline; 
+      color: var(--accent); 
+    } 
+    #my-vibes.section-content { 
+      background: linear-gradient(135deg, #23253a 80%, #32ffc6 100%); 
+      border: 3px solid transparent; 
+      margin-bottom: 3rem; 
+      box-shadow: 0 2px 14px rgba(0,0,0,0.10); 
+      border-radius: var(--radius); 
+      position: relative; 
+      overflow: hidden; 
+    } 
+    #my-vibes .spotify-title { 
+      text-align: center; 
+      font-family: 'Montserrat', sans-serif; 
+      font-size: 2.1rem; 
+      font-weight: 700; 
+      background: linear-gradient(90deg, #2563eb, #f59e42); 
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
+      margin-bottom: 1.1rem; 
+      letter-spacing: 2px; 
+      padding-top: .5rem; 
+      animation: spotifyTitleAnim 1s infinite alternate; 
+    } 
+    @keyframes spotifyTitleAnim { 
+      0% {background: linear-gradient(90deg, var(--blue), var(--orange)); -webkit-background-clip: text;} 
+      50% {background: linear-gradient(90deg, var(--orange), var(--blue));-webkit-background-clip: text;} 
+      100% {background: linear-gradient(90deg, var(--blue), var(--orange));-webkit-background-clip: text;} 
+    } 
+    #my-vibes .spotify-widget { 
+      width: 100%; 
+      max-width: 420px; 
+      margin: 1.5rem auto 1rem auto; 
+      border-radius: 22px; 
+      overflow: hidden; 
+      box-shadow: 0 0 16px #23253a44; 
+      border: 2.5px solid #2563eb44; 
+      background: linear-gradient(90deg, #23253a 70%, #2563eb 100%); 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+    } 
+    @media (max-width: 900px) { 
+      #my-vibes .spotify-widget { max-width: 100%; } 
+      .digital-clock { top: 10px; right: 12px; font-size: 1.05em; padding: 0.45em 0.7em; } 
+    } 
+    @media (max-width: 650px) { 
+      header h1 { font-size: 2.1rem; } 
+      nav { gap: 1rem; } 
+      main { padding: 1.2rem .3rem 0; } 
+      #typewriter { font-size: 1.5rem; height: 2.1rem;} 
+      .profile-photo-ring { margin-bottom: .7rem; } 
+      #my-vibes .spotify-widget { max-width: 96vw; } 
+      .buddha-cards, .shiv-cards { flex-direction: column; gap: 1.2rem;} 
+      .buddha-card, .shiv-card { width: 95%; min-width: unset; } 
+      .skills-list { flex-wrap: wrap;} 
+      .contact-links { gap: 1em; } 
+      .digital-clock
+      { top: 8px; right: 8px; font-size: .95em; padding: 0.3em 0.6em; } 
+    } 
+  </style> 
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@700&display=swap" rel="stylesheet"> 
+</head> 
+<body> 
+  <!-- Google Tag Manager (noscript) --> 
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND8GH3SM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
+  <!-- End Google Tag Manager (noscript) --> 
+  <div class="digital-clock" id="digitalClock"></div> 
+  <header> 
+    <span class="profile-photo-ring" id="profilePhotoRing"> 
+      <img src="https://tse1.mm.bing.net/th/id/OIP.lu_FCiCsj-PsKC6DJC-sZwHaHa?pid=ImgDet&w=474&h=474&rs=1&o=7&rm=3" class="profile-photo" alt="Sanika-V Profile Photo"> 
+      <canvas id="particles-silver"></canvas> 
+    </span> 
+    <div id="typewriter"></div> 
+    <nav> 
+      <a href="#projects"><span>Projects</span></a> 
+      <a href="#skills"><span>Skills</span></a> 
+      <a href="#buddha"><span>Buddha Teachings</span></a> 
+      <a href="#shiv"><span>Shiv Teachings</span></a> 
+      <a href="#contact"><span>Contact</span></a> 
+      <a href="#my-vibes"><span>My Vibes</span></a> 
+    </nav> 
+  </header> 
+  <main> 
+    <section id="projects" class="section-content section-with-particles"> 
+      <canvas class="section-particles-bg"></canvas> 
+      <h2>Projects</h2> 
+      <div class="projects-grid"> 
+        <!-- Add your projects here --> 
+      </div> 
+    </section> 
+    <section id="skills" class="section-content section-with-particles"> 
+      <canvas class="section-particles-bg"></canvas> 
+      <h2>Skills & Tools</h2> 
+      <div class="skills-list"> 
+        <button class="skill-btn">Music</button> 
+        <button class="skill-btn">Art</button">Photography</button> 
+        <button class="skill-btn">Performances</button> 
+      </div> 
+      <p>Always learning, always creating. Let's collaborate!</p> 
+    </section> 
+    <section id="buddha" class="section-content section-with-particles"> 
+      <canvas class="section-particles-bg"></canvas> 
+      <h2>krishna Teachings</h2> 
+      <div class="buddha-cards"> 
+        <!-- Add Buddha teachings here --> 
+      </div> 
+    </section> 
+    <section id="shiv" class="section-content section-with-particles"> 
+      <canvas class="section-particles-bg"></canvas> 
+      <h2>Shiv Teachings</h2> 
+      <div class="shiv-cards"> 
+        <!-- Add Shiv teachings here --> 
+      </div> 
+    </section> 
+    <section id="contact" class="section-content section-with-particles"> 
+      <canvas class="section-particles-bg"></canvas> 
+      <h2>Contact</h2> 
+      <div class="contact-links"> 
+        <!-- Add contact links here --> 
+      </div> 
+    </section> 
+    <section id="my-vibes" class="section-content section-with-particles"> 
+      <canvas class="section-particles-bg"></canvas> 
+      <h2 class="spotify-title">My Vibes</h2> 
+      <div class="spotify-widget"> 
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2QnLDxeZMzIoCno54I9vKj?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> 
+      </div> 
+    </section> 
+  </main> 
+  <audio id="bgm-audio" src="bgm.mp3" loop autoplay style="display:none"></audio> 
+  <script> 
+    // script remains the same 
+  </script> 
+</body> 
 </html>
